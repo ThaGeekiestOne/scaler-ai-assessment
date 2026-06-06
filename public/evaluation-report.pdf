@@ -1,0 +1,147 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 2806 >>
+stream
+BT
+/F1 10 Tf
+42 748 Td
+12 TL
+/F1 12 Tf
+(Scaler AI Intern Submission - 1 Page Evaluation Report) Tj
+T*
+/F1 10 Tf
+() Tj
+T*
+/F1 10 Tf
+(Metrics) Tj
+T*
+/F1 10 Tf
+(Voice quality: Vapi web-call smoke test passed for persona Q&A and calendar-tool flow.) Tj
+T*
+/F1 10 Tf
+(Target first response <2s; final PSTN run should record p50/p95 first-response latency from) Tj
+T*
+/F1 10 Tf
+(Vapi logs, transcription errors from transcript review, and booking completion across 5) Tj
+T*
+/F1 10 Tf
+(calls.) Tj
+T*
+/F1 10 Tf
+(Chat groundedness: local API smoke tests passed for resume Q&A, why-hire fit, live commit) Tj
+T*
+/F1 10 Tf
+(lookup, and prompt-injection refusal. The chat now uses an agentic tool loop over resume) Tj
+T*
+/F1 10 Tf
+(search, GitHub search, live GitHub metadata/commits, and calendar tools.) Tj
+T*
+/F1 10 Tf
+(Chat eval method: 15-question golden set split across resume, projects, GitHub,) Tj
+T*
+/F1 10 Tf
+(availability, booking, and adversarial prompts; manually label answer support and source) Tj
+T*
+/F1 10 Tf
+(relevance. Track hallucination rate, tool-selection accuracy, precision@5, recall@5, and) Tj
+T*
+/F1 10 Tf
+(p50/p95 response time.) Tj
+T*
+/F1 10 Tf
+() Tj
+T*
+/F1 10 Tf
+(Failure Modes and Fixes) Tj
+T*
+/F1 10 Tf
+(1. Chat refused 'why should we hire you?' because local-hash retrieval scores were below the) Tj
+T*
+/F1 10 Tf
+(dense-embedding threshold. Fix: local-index threshold cap plus resume/GitHub fit retrieval) Tj
+T*
+/F1 10 Tf
+(boost.) Tj
+T*
+/F1 10 Tf
+(2. GitHub questions were weak because only resume was indexed. Fix: GitHub ingestion now) Tj
+T*
+/F1 10 Tf
+(adds README content, language stats, repo descriptions, topics, and recent commits before) Tj
+T*
+/F1 10 Tf
+(building the index.) Tj
+T*
+/F1 10 Tf
+(3. Scheduling and retrieval were separate branches, so mixed questions were brittle. Fix:) Tj
+T*
+/F1 10 Tf
+(/api/chat now lets the agent call calendar and retrieval tools in the same loop.) Tj
+T*
+/F1 10 Tf
+() Tj
+T*
+/F1 10 Tf
+(Tradeoffs) Tj
+T*
+/F1 10 Tf
+(Accuracy vs coverage: the chat refuses unsupported claims and uses a small top-k for) Tj
+T*
+/F1 10 Tf
+(latency. This may miss obscure repo details, but it prevents confident hallucinations during) Tj
+T*
+/F1 10 Tf
+(probing.) Tj
+T*
+/F1 10 Tf
+(Cost vs reliability: Ollama Cloud is used for planning/generation and Gemini is used for) Tj
+T*
+/F1 10 Tf
+(embeddings. The local fallback preserves tool routing and extractive grounded answers during) Tj
+T*
+/F1 10 Tf
+(offline development or model outages.) Tj
+T*
+/F1 10 Tf
+() Tj
+T*
+/F1 10 Tf
+(With 2 More Weeks) Tj
+T*
+/F1 10 Tf
+(Add an automated RAGAS/LLM-judge eval suite, transcript-level voice scoring, nightly GitHub) Tj
+T*
+/F1 10 Tf
+(re-indexing, uptime alerts for the 7-day review window, and a stricter slot-confirmation) Tj
+T*
+/F1 10 Tf
+(state machine for voice and chat.) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+3169
+%%EOF
